@@ -102,7 +102,7 @@ class AdminThemeReno extends AdminTheme implements Module, ConfigurableModule {
 
 		foreach ($adminPages as $p){
 
-			if (!$p->viewable()) return;
+			if (!$p->viewable()) continue;
 
 			$field = wire('modules')->get("InputfieldText");
 			$field->attr('name', $p->name);
